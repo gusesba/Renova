@@ -57,14 +57,11 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
-    <Folder Include="PublishProfile" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Renova.sql" />
     <Build Include="Tables\Usuario.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PublishProfile\Renova.DataTools.publish.xml" />
     <None Include="CompareSQL.scmp" />
   </ItemGroup>
 </Project>

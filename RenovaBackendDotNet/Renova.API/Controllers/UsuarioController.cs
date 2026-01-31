@@ -1,4 +1,4 @@
-﻿using Renova.Domain.Model;
+﻿using Renova.Domain.Model.Dto;
 using Renova.Service.Commands;
 using Renova.Service.Queries;
 using MediatR;
@@ -17,7 +17,7 @@ namespace Renova.API.Controllers
         }
 
         [HttpPost("login")]
-        [ProducesResponseType(typeof(RenovaModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(LoginDto), StatusCodes.Status200OK)]
         public async Task<IActionResult> Login([FromBody] LoginQuery request)
         {
             var token = await _mediator.Send(request);
@@ -28,7 +28,7 @@ namespace Renova.API.Controllers
         }
 
         [HttpPost("registrar")]
-        [ProducesResponseType(typeof(RenovaModel), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(LoginDto), StatusCodes.Status201Created)]
 
         public async Task<IActionResult> Registrar([FromBody] SignUpCommand command)
         {
